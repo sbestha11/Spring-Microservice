@@ -32,8 +32,8 @@ public class Users {
 	private String firstName;
 	private String lastName;
 	
-	@Email(message = "Invalid email format")
-    @NotBlank(message = "Email cannot be blank")
+	//@Email(message = "Invalid email format")
+    //@NotBlank(message = "Email cannot be blank")
 	private String email;
 	
 	@Column(unique = true)
