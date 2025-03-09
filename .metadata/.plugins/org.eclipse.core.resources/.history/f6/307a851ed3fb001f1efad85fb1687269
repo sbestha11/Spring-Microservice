@@ -1,0 +1,22 @@
+package com.javaexpress.dto;
+
+import com.javaexpress.model.RoleBasedAuthority;
+import com.javaexpress.model.User;
+
+public class CredentialDto {
+
+	
+	private Integer credentialId;
+	
+	private String userName;
+	private String password;
+	
+	private RoleBasedAuthority roleBasedAuthority;
+	
+	private boolean isEnabled;
+	private boolean isAccountNonExpired;
+	private String isAccountNonLocked;
+	private boolean isCredentialNonExpired;
+	
+	private User user;
+}

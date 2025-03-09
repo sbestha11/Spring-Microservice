@@ -1,0 +1,5 @@
+package com.javaexpress.service;
+
+public class UserServiceImpl extends UserService {
+
+}

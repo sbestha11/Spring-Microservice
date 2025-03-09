@@ -1,0 +1,49 @@
+package com.javaexpress.helper;
+
+import org.springframework.beans.BeanUtils;
+import org.springframework.util.ObjectUtils;
+import com.javaexpress.dto.CredentialDto;
+import com.javaexpress.dto.UserDto;
+import com.javaexpress.model.Credential;
+import com.javaexpress.model.User;
+
+import java.util.Optional;
+
+public interface UserMappingHelper {
+
+    
+    static User map(UserDto userDto) {
+        if (ObjectUtils.isEmpty(userDto)) {
+            return null;
+        }
+
+        User user = new User();
+        BeanUtils.copyProperties(userDto, user);
+
+        Optional.ofNullable(userDto.getCredentialDto()).ifPresent(credentialDto -> {
+            Credential credential = new Credential();
+            BeanUtils.copyProperties(credentialDto, credential);
+            credential.setUser(user);
+            user.setCredential(credential);
+        });
+
+        return user;
+    }
+
+    static UserDto map(User user) {
+        if (ObjectUtils.isEmpty(user)) {
+            return null;
+        }
+
+        UserDto userDto = new UserDto();
+        BeanUtils.copyProperties(user, userDto);
+
+        Optional.ofNullable(user.getCredential()).ifPresent(credential -> {
+            CredentialDto credentialDto = new CredentialDto();
+            BeanUtils.copyProperties(credential, credentialDto);
+            userDto.setCredentialDto(credentialDto);
+        });
+
+        return userDto;
+    }
+}

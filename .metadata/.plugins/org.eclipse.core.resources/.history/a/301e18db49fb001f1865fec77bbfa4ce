@@ -1,0 +1,5 @@
+package com.javaexpress.repository;
+
+public class UserRepository {
+
+}

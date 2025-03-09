@@ -1,0 +1,13 @@
+package com.javaexpress.dto;
+
+import com.javaexpress.model.User;
+
+public class AddressDto {
+
+	private Integer addressId;
+	private String fullAddress;
+	private String postalCode;
+	private String city;
+	
+	private User user;
+}

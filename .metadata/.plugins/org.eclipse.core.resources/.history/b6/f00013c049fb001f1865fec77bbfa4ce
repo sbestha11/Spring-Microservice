@@ -1,0 +1,5 @@
+package com.javaexpress.repository;
+
+public interface CredentialRepository {
+
+}

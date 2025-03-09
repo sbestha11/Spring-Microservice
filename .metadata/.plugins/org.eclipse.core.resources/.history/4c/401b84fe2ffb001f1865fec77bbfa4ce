@@ -1,0 +1,9 @@
+package com.javaexpress.model;
+
+public class Address {
+
+	private Integer addressId;
+	private String fullAddress;
+	private String postalCode;
+	private String city;
+}

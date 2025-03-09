@@ -1,0 +1,5 @@
+package com.javaexpress.helper;
+
+public class UserMappingHelper {
+
+}

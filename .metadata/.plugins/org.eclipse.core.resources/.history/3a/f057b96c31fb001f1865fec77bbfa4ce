@@ -1,0 +1,5 @@
+package com.javaexpress.model;
+
+public enum RoleBasedAuthority1 {
+
+}

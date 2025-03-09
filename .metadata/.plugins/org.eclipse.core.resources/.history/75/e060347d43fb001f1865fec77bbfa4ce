@@ -1,0 +1,18 @@
+package com.javaexpress.model;
+
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.RequiredArgsConstructor;
+
+@Getter
+@AllArgsConstructor
+public enum RoleBasedAuthority {
+
+	ROLE_USER("USER"), ROLE_ADMIN("ADMIN");
+
+	RoleBasedAuthority(String string) {
+		this.role = string;
+	}
+
+	private final String role;
+}
